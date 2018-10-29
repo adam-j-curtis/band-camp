@@ -3,6 +3,38 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+  <div>
+      <%= f.label :first_name, 'First Name', :class => 'email-field' %><br />
+      <em>(Will Not Display On Website)</em>
+      <div class="input-form">
+        <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+      </div>
+    </div>
+
+    <div>
+      <%= f.label :last_name, 'Last Name', :class => 'email-field' %><br />
+      <em>(Will Not Display On Website)</em>
+      <div class="input-form">
+        <%= f.text_field :last_name, autocomplete: "last_name" %>
+      </div>
+    </div>
+
+    <div>
+      <%= f.label :school_name, 'School Name', :class => 'email-field' %><br />
+      <em>(Will Not Display On Website)</em>
+      <div class="input-form">
+        <%= f.text_field :school_name, autocomplete: "school_name" %>
+      </div>
+    </div>
+    
+    <div>
+      <%= f.label :city, 'City', :class => 'email-field' %><br />
+      <em>(Will Not Display On Website)</em>
+      <div class="input-form">
+        <%= f.text_field :city, autocomplete: "city" %>
+      </div>
+    </div>
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
