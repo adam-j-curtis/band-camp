@@ -3,7 +3,6 @@ require_relative "../../app/models/user.rb"
 
 RSpec.describe User, :type => :model do
 
-
   # fill_in 'Password confirmation', with: 'password'
 
   it "is not valid without a First Name" do
@@ -33,7 +32,7 @@ RSpec.describe User, :type => :model do
   it "is not valid without an Email" do
     test_user = User.create(first_name: "June", last_name: "Vega", school_name: "Eldridge Academy", city: "Buenos Aires", email: nil, password: "password")
     expect(test_user).to_not be_valid
-    expect(test_user.errors.messages).to eq(:password=>["can't be blank"])
+    expect(test_user.errors.messages).to eq(:email=>["can't be blank"])
   end
 
   it "is not valid without a Password" do
