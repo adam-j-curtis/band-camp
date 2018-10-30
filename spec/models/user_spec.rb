@@ -36,7 +36,7 @@ RSpec.describe User, :type => :model do
   end
 
   it "is not valid without a Password" do
-    test_user = User.create(first_name: "June", last_name: "Vega", email: "Eldridge Academy", city: "Buenos Aires", email: "vegas.rosadas@example.com", password: nil)
+    test_user = User.create(first_name: "June", last_name: "Vega", school_name: "Eldridge Academy", city: "Buenos Aires", email: "vegas.rosadas@example.com", password: nil)
     expect(test_user).to_not be_valid
     expect(test_user.errors.messages).to eq(:password=>["can't be blank"])
   end
