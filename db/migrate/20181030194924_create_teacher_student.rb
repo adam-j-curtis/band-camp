@@ -1,6 +1,6 @@
-class CreateEducatorEducatee < ActiveRecord::Migration[5.2]
+class CreateTeacherStudent < ActiveRecord::Migration[5.2]
   def change
-    create_table :educator_educatees do |t|
+    create_table :teacher_student do |t|
       t.belongs_to :teacher, null: false
       t.belongs_to :student, null: false
 
