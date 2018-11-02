@@ -3,12 +3,11 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    # @students = User.students
+    @students = User.where(position: "student")
   end
 
   def show
     @user = User.find(params[:id])
 
-    #@reviews = @restaurant.reviews
   end
 end
