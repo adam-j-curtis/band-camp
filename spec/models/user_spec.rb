@@ -44,6 +44,6 @@ RSpec.describe User, :type => :model do
   it "is not valid without a Position" do
     test_user = User.create(first_name: "June", last_name: "Vega", school_name: "Eldridge Academy", city: "Buenos Aires", email: "vegas.rosadas@example.com", password: "password", position: nil)
     expect(test_user).to_not be_valid
-    expect(test_user.errors.messages).to eq(:password=>["can't be blank"])
+    expect(test_user.errors.messages).to eq(:position=>["can't be blank"])
   end
 end
