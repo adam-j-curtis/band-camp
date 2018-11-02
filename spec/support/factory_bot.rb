@@ -6,6 +6,7 @@ FactoryBot.define do
     last_name {'Vega'}
     school_name {'Academy'}
     city {'buenos aires'}
+    position {'teacher'}
     sequence(:email) {|n| "user#{n}@example.com" }
     password { 'password' }
     password_confirmation { 'password' }

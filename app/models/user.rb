@@ -8,6 +8,7 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :school_name, presence: true
   validates :city, presence: true
+  validates :position, presence: true
 
   # student side of the relationship -> teacher.
   has_many :teacher_students_as_student, class_name: "TeacherStudent", foreign_key: "student_id"

@@ -20,6 +20,14 @@
     </div>
 
     <div>
+      <%= f.label :position, 'Position', :class => 'email-field' %><br />
+      <em>(Will Not Display On Website)</em>
+      <div class="input-form">
+        <%= f.text_field :position, autocomplete: "position" %>
+      </div>
+    </div>
+
+    <div>
       <%= f.label :school_name, 'School Name', :class => 'email-field' %><br />
       <em>(Will Not Display On Website)</em>
       <div class="input-form">
