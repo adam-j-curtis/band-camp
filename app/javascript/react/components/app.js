@@ -1,7 +1,13 @@
+// import { Router, browserHistory, Route, IndexRoute } from 'react-router';
+// import StudentShow from '../containers/StudentShow'
 import React from 'react'
 
 export const App = (props) => {
-  return (<h1>Make It So React</h1>)
+  return (
+    <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
+      <Route path='/user/:id' component={StudentShow}/>
+    </Router>
+  )
 }
 
 export default App
