@@ -2,3 +2,26 @@
 
 
 # README
+
+To fix
+
+CSS:
+- Centering problem on splash w/foundation.
+- BG color top bar at "Sign Out, Sign In".
+
+Features:
+- Sign in on splash screen.
+
+
+To add
+
+DB:
+- User(student) ->=join=<- instrument
+- User(student) ->=join=<- band
+- User(teacher) ->=join=<- band
+- ? Move city, school, and band to band table.
+
+Features:
+- Log in goes to student show page or teacher show page.
+- Teacher show page shows students list.
+- Student show page shows recordings for week.
