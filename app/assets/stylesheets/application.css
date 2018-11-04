@@ -16,9 +16,73 @@
 
  */
 
+/* google fonts enabled and their properties:
 
-/*body {
- background: url(/assets/GoldBG.jpg) no-repeat center center fixed;
- background-position: center;
- background-size: cover;
-}*/
+    font-family: 'Great Vibes', cursive;
+
+    font-family: 'Tangerine', cursive;  -> dummy text, students heading
+
+    font-family: 'Parisienne', cursive;  -> Ensemble
+
+    font-family: 'Alex Brush', cursive;
+
+    font-family: 'Italianno', cursive;  -> welcome text
+
+    font-family: 'Mrs Saint Delafield', cursive;
+
+    font-family: 'Arima Madurai', cursive;  -> student names
+
+    font-family: 'Chelsea Market', cursive;  -> student names
+    */
+nav.top-bar {
+  background-color: #F2AB41
+}
+
+/* trying to match bg color of nav bar to sign out in nav bar */
+section.top-bar-section {
+  background-color: #F2AB41
+}
+
+body.homes.index {
+  background: url(/assets/gold-bg.jpg) no-repeat center center fixed, rgba(251,233,223,0.7);
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
+body.users.index {
+  background: url(/assets/paper-lavender-bg.jpg) no-repeat center center fixed, rgba(251,233,223,0.7);
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
+body.users.show {
+  background: url(/assets/music-slate-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+#welcome {
+  font-family: 'Italianno', cursive;
+  font-size: 5em;
+}
+
+#app-name {
+  font-family: 'Parisienne', cursive;
+  font-size: 10em;
+}
+
+.students-heading {
+  font-family: 'Tangerine', cursive;
+  font-size: 3em;
+  font-weight: bold;
+  color: #464134
+}
+
+.dummy {
+  font-family: 'Tangerine', cursive;
+  color: #F3F2F2
+}
+
+.student-name {
+  font-family: 'Chelsea Market', cursive;
+  color: #F3F2F2
+}

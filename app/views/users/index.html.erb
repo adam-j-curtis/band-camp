@@ -6,7 +6,7 @@
 <% end %>
 <br/>
 
-<h3>Students:</h3>
+<h3 class="students-heading">Students:</h3>
   <% @students.each do |student| %>
-  <h6><%= link_to student.full_name, user_path(student) %></h6>
+  <h6 class="student-name"><%= link_to student.full_name, user_path(student) %></h6>
   <% end %>

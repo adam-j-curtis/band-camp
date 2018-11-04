@@ -3,13 +3,16 @@
 <head>
   <title>Ensemble</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <%= javascript_include_tag "vendor/modernizr" %>
 
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Averia+Gruesa+Libre|Chelsea+Market|Great+Vibes|Italianno|Mrs+Saint+Delafield|Parisienne|Tangerine" rel="stylesheet">
 </head>
-<body>
+<body class="<%= params[:controller] %> <%= params[:action] %>">
 
   <nav class="top-bar">
     <ul class="title-area">
@@ -39,7 +42,9 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-  <%= yield %>
+  <div class="row column">
+    <%= yield %>
+  </div>
 
   <%= javascript_include_tag 'application' %>
 
@@ -51,5 +56,9 @@
   <%= javascript_pack_tag 'application' %>
 
   <%= yield :extra_footer %>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
