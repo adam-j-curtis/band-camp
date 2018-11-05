@@ -18,7 +18,25 @@ class User < ApplicationRecord
   has_many :teacher_students_as_teacher, class_name: "TeacherStudent", foreign_key: "teacher_id"
   has_many :students, through: :teacher_students_as_teacher, source: :student
 
-  def full_name
+  def full_name_last
     "#{last_name}, #{first_name}"
   end
+
+  def full_name_first
+    "#{first_name} #{last_name}"
+  end
+
+  # def student_list
+  #   students = []
+  #   students = User.find(params[:id]).students
+  #   name_array = []
+  #   students.each do |student|
+  #     name = student.full_name_last
+  #     name_array << name
+  #   end
+  #   name_array.sort!
+  #   name_array.each do |name|
+  #     name
+  #   end
+  # end
 end
