@@ -1,3 +1,23 @@
 <h1 class="dummy">Ruby User Dummy Show Page</h1>
 
-<h2 class="student-name"><%= @user.full_name %></h2>
+<% if @user.position == "teacher" %>
+  <h2 class="teacher-name"><%= @user.full_name_first %></h2>
+  <h3>Your students:</h3>
+  <% students = [] %>
+  <% students = @user.students %>
+  <% name_array = [] %>
+  <% students.each do |student| %>
+    <% name = student.full_name_last %>
+    <% num = student.id %>
+    <% hash = { student: name, id: num} %>
+    <% name_array << hash %>
+  <% end %>
+  <% name_array.sort_by! { |hash| hash[:student]} %>
+  <% name_array.each do |name| %>
+    <h3 class="student-name"><%= link_to name[:student], user_path(name[:id]) %></h3>
+  <% end %>
+<% end %>
+
+<% if @user.position == "student" %>
+  <%= @user.full_name_first %>
+<% end %>

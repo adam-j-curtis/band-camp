@@ -82,6 +82,11 @@ body.users.show {
   color: #F3F2F2
 }
 
+.teacher-name {
+  font-family: 'Great Vibes', cursive;
+  color: #F3F2F2
+}
+
 .student-name {
   font-family: 'Chelsea Market', cursive;
   color: #F3F2F2
