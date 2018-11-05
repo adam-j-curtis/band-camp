@@ -60,14 +60,49 @@ body.users.show {
   background-size: cover;
 }
 
+body.teachers.show {
+  background: url(/assets/music-slate-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.students.show {
+  background: url(/assets/music-slate-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.book-container {
+    position: absolute;
+    align: center;
+    text-align: center;
+    color: white;
+}
+
+.top-left {
+    position: absolute;
+    top: 1em;
+    left: 3.5em;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 1em;
+    left: 0.85em;
+}
+
+
+/* #book-pages {
+  position:
+  z-index: -1;
+} */
+
 #welcome {
   font-family: 'Italianno', cursive;
-  font-size: 5em;
+  font-size: 2.5em;
 }
 
 #app-name {
   font-family: 'Parisienne', cursive;
-  font-size: 10em;
+  font-size: 5em;
 }
 
 .students-heading {
