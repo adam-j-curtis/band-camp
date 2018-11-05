@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  # root 'devise/sessions#new' (login on splash page)
+  # get '/users/sign_in', to: 'devise/sessions#new'
+  # root 'devise/sessions#new'
+
   root 'homes#index'
   get 'api/v1/users/:user-id', to: 'api/v1/users#show'
 
@@ -8,10 +10,19 @@ Rails.application.routes.draw do
   #
   resources :users, only: [ :index, :show ]
 
+<<<<<<< HEAD
   namespace :api do
     namespace :v1 do
       resources :users, only: [:index, :show]
     end
   end
+=======
+
+    # namespace :api do
+    #   namespace :v1 do
+    #     resources :users, only: [:index, :show]
+    #   end
+    # end
+>>>>>>> master
 
 end
