@@ -70,11 +70,47 @@ body.students.show {
   background-size: cover;
 }
 
-.book-container {
+#book-container {
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; */
     position: absolute;
     align: center;
     text-align: center;
     color: white;
+}
+
+#upper-field {
+  position: absolute;
+  top: 9em;
+  right: 12em;
+}
+
+#middle-field {
+  position: absolute;
+  top: 13em;
+  right: 12em;
+}
+
+.lower-field1 {
+  top: 17em;
+  right: 12em;
+}
+
+.lower-field2 {
+  top: 21em;
+  right: 12em;
+}
+
+.lower-field3 {
+  top: 25em;
+  right: 12em;
+}
+
+#bottom-field {
+  top: 29em;
+  right: 12em;
 }
 
 .top-left {

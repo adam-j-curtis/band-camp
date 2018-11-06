@@ -7,7 +7,7 @@ class TeachersController < ApplicationController
   end
 
   def show
+    binding.pry
     @user = User.find(params[:id])
-    @students = @user.students
   end
 end
