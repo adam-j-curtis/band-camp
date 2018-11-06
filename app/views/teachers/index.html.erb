@@ -1,0 +1,11 @@
+<!-- unused for now-->
+
+<h1>Students Index</h1>
+</br>
+<h3>Students:<h3>
+  <% @students.sort_by! { |student| student.last_name }
+
+  <% @students.each do |student| %>
+  <h6><%= student.full_name %></h6>
+<%= link_to student.full_name, student_path(student) %>
+<br/>

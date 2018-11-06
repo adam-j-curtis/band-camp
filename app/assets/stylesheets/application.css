@@ -60,14 +60,85 @@ body.users.show {
   background-size: cover;
 }
 
+body.teachers.show {
+  background: url(/assets/music-slate-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.students.show {
+  background: url(/assets/music-slate-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+#book-container {
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; */
+    position: absolute;
+    align: center;
+    text-align: center;
+    color: white;
+}
+
+#upper-field {
+  position: absolute;
+  top: 9em;
+  right: 12em;
+}
+
+#middle-field {
+  position: absolute;
+  top: 13em;
+  right: 12em;
+}
+
+.lower-field1 {
+  top: 17em;
+  right: 12em;
+}
+
+.lower-field2 {
+  top: 21em;
+  right: 12em;
+}
+
+.lower-field3 {
+  top: 25em;
+  right: 12em;
+}
+
+#bottom-field {
+  top: 29em;
+  right: 12em;
+}
+
+.top-left {
+    position: absolute;
+    top: 1em;
+    left: 3.5em;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 1em;
+    left: 0.85em;
+}
+
+
+/* #book-pages {
+  position:
+  z-index: -1;
+} */
+
 #welcome {
   font-family: 'Italianno', cursive;
-  font-size: 5em;
+  font-size: 2.5em;
 }
 
 #app-name {
   font-family: 'Parisienne', cursive;
-  font-size: 10em;
+  font-size: 5em;
 }
 
 .students-heading {

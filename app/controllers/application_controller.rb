@@ -9,6 +9,22 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery unlees: -> { request.format.json? }
 
+  def after_sign_in_path_for(resource)
+    if resource.position == "teacher"
+      "/teachers/#{resource.id}"
+    else
+      "/students/#{resource.id}"
+    end
+  end
+
+  def after_sign_up_path_for(resource)
+    if resource.position == "teacher"
+      "/teachers/#{resource.id}"
+    else
+      "/students/#{resource.id}"
+    end
+  end
+
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
