@@ -1,6 +1,6 @@
 // import { Router, browserHistory, Route, IndexRoute } from 'react-router';
 // import StudentShow from '../containers/StudentShow'
-import React from 'react'
+import React, { Component } from 'react'
 // import AudioRecorder from 'react-audio-recorder';
 
 class StudentShow extends Component {

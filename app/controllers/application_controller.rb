@@ -10,10 +10,18 @@ class ApplicationController < ActionController::Base
   protect_from_forgery unlees: -> { request.format.json? }
 
   def after_sign_in_path_for(resource)
-    if @user.position == "teacher"
-      '/teachers/:id'
+    if resource.position == "teacher"
+      "/teachers/#{resource.id}"
     else
-      '/students/:id'
+      "/students/#{resource.id}"
+    end
+  end
+
+  def after_sign_up_path_for(resource)
+    if resource.position == "teacher"
+      "/teachers/#{resource.id}"
+    else
+      "/students/#{resource.id}"
     end
   end
 
