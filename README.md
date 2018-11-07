@@ -23,5 +23,4 @@ DB:
 
 Features:
 - Log in goes to student show page or teacher show page.
-- Teacher show page shows students list.
 - Student show page shows recordings for week.
