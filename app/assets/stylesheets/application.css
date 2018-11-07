@@ -93,7 +93,7 @@ body.students.show {
   right: 12em;
 }
 
-.lower-field1 {
+/* .lower-field1 {
   top: 17em;
   right: 12em;
 }
@@ -111,7 +111,17 @@ body.students.show {
 #bottom-field {
   top: 29em;
   right: 12em;
+} */
+
+.home-sign-ins.click-ons {
+  padding: 3em, 2em, 3em;
+  /* border-style: hidden; */
+  border-style: dotted;
+  border-radius: 10px;
+  margin: 3em, 6em, 1em, 2em;
 }
+
+
 
 .top-left {
     position: absolute;
