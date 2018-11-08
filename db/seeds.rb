@@ -38,7 +38,7 @@ TeacherStudent.create(student: s7, teacher: t4)
 TeacherStudent.create(student: s8, teacher: t4)
 TeacherStudent.create(student: s9, teacher: t4)
 
-# instruments and assignments
+# instruments
 flute = InstrumentSection.create(instrument: "flute")
 snare = InstrumentSection.create(instrument: "snare")
 trombone = InstrumentSection.create(instrument: "trombone")
@@ -50,6 +50,7 @@ tuba = InstrumentSection.create(instrument: "tuba")
 clarinet = InstrumentSection.create(instrument: "clarinet")
 sousaphone = InstrumentSection.create(instrument: "sousaphone")
 
+# assignments
 scale_a = Assignment.create(name: "Concert A Scale", description: "Record this scale to Ensemble at the start of the week.  Practice the scale daily.  Record this scale to Ensemble at the end of the week.  Remember to transcribe the scale if your instrument requires it!")
 scale_a_flat = Assignment.create(name: "Concert Ab Scale" , description: "Record this scale to Ensemble at the start of the week.  Practice the scale daily.  Record this scale to Ensemble at the end of the week.  Remember to transcribe the scale if your instrument requires it!")
 scale_b = Assignment.create(name: "Concert B Scale", description: "Record this scale to Ensemble at the start of the week.  Practice the scale daily.  Record this scale to Ensemble at the end of the week.  Remember to transcribe the scale if your instrument requires it!")
