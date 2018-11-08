@@ -18,6 +18,12 @@ class User < ApplicationRecord
   has_many :teacher_students_as_teacher, class_name: "TeacherStudent", foreign_key: "teacher_id"
   has_many :students, through: :teacher_students_as_teacher, source: :student
 
+  # has_many :user_assignments
+  # has_many :assignments, through: :user_assignments
+
+  has_many :user_instrument_sections
+  has_many :instrument_sections, through: :user_instrument_sections
+
   def full_name_last
     "#{last_name}, #{first_name}"
   end
