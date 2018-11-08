@@ -13,7 +13,9 @@ class StudentShow extends Component {
   }
 
   componentDidMount(){
+    debugger;
     let studentId = this.props.params.id
+
     fetch(`/api/v1/students/${studentId}`)
     .then(response => {
       if (response.ok) {
@@ -26,6 +28,10 @@ class StudentShow extends Component {
     })
     .then(response => response.json())
     .then(body => {
+<<<<<<< HEAD
+=======
+      debugger;
+>>>>>>> master
       console.log(body.student);
       this.setState({ student: body})
     })
