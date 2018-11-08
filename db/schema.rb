@@ -10,21 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_07_170247) do
+ActiveRecord::Schema.define(version: 2018_11_08_154130) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "assignment_instrument_sections", force: :cascade do |t|
+    t.bigint "assignment_id", null: false
+    t.bigint "instrument_section_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["assignment_id"], name: "index_assignment_instrument_sections_on_assignment_id"
+    t.index ["instrument_section_id"], name: "index_assignment_instrument_sections_on_instrument_section_id"
+  end
+
   create_table "assignments", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
-    t.bigint "instrumental_sections_id", null: false
-    t.bigint "users_id", null: false
-    t.index ["instrumental_sections_id"], name: "index_assignments_on_instrumental_sections_id"
-    t.index ["users_id"], name: "index_assignments_on_users_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "instrumental_sections", force: :cascade do |t|
+  create_table "chair_instrument_sections", force: :cascade do |t|
+    t.bigint "chair_id"
+    t.bigint "instrument_section_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chair_id"], name: "index_chair_instrument_sections_on_chair_id"
+    t.index ["instrument_section_id"], name: "index_chair_instrument_sections_on_instrument_section_id"
+  end
+
+  create_table "chairs", force: :cascade do |t|
+    t.string "ordinal_name", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "instrument_sections", force: :cascade do |t|
     t.string "instrument", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,6 +59,24 @@ ActiveRecord::Schema.define(version: 2018_11_07_170247) do
     t.datetime "updated_at", null: false
     t.index ["student_id"], name: "index_teacher_students_on_student_id"
     t.index ["teacher_id"], name: "index_teacher_students_on_teacher_id"
+  end
+
+  create_table "user_assignments", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "assignment_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["assignment_id"], name: "index_user_assignments_on_assignment_id"
+    t.index ["user_id"], name: "index_user_assignments_on_user_id"
+  end
+
+  create_table "user_instrument_sections", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "instrument_section_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["instrument_section_id"], name: "index_user_instrument_sections_on_instrument_section_id"
+    t.index ["user_id"], name: "index_user_instrument_sections_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
