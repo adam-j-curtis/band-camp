@@ -8,6 +8,7 @@ class StudentShow extends Component {
     super(props)
     this.state = {
       student: {},
+      instrumentSections: [],
       assignments: []
     }
   }
