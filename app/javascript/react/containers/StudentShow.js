@@ -1,7 +1,11 @@
 // import { Router, browserHistory, Route, IndexRoute } from 'react-router';
 // import StudentShow from '../containers/StudentShow'
 import React, { Component } from 'react'
-import AudioRecorder from 'react-audio-recorder';
+// import RecorderJs from '../containers/RecorderJs'
+// import Recorder from 'recorder-js';
+
+
+
 
 class StudentShow extends Component {
   constructor(props){
@@ -14,13 +18,14 @@ class StudentShow extends Component {
   }
 
   componentDidMount(){
-    debugger;
     let studentId = this.props.params.id
+    console.log(`${this.props.params.id}`)
 
     fetch(`/api/v1/students/${studentId}`)
     .then(response => {
       if (response.ok) {
         return response;
+
       } else {
         let errorMessage = `${response.status} (${response.statusText})`,
         error = new Error(errorMessage);
@@ -29,13 +34,15 @@ class StudentShow extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      console.log(body.student);
-      this.setState({ student: body})
+      console.log(body);
+      this.setState({ student: body.user})
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
   render(){
+
+
 
     // let oneStudent = this.state.student.map(student => {
     //   return(
@@ -58,7 +65,9 @@ class StudentShow extends Component {
 
     return (
       <div className="text-center student-show">
-        <h1>{this.state.student.first_name}</h1>
+        <h1>{this.state.student.first_name} {this.state.student.last_name}</h1>
+        <h2>Your section(s): </h2>
+        <h2>This week's assignment(s): </h2>
       </div>
     )
   }
