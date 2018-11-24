@@ -1,12 +1,13 @@
-<%= image_tag("splash-book.png", :class => "book-container")%>
-
-<div class="home-sign-in">
-  <%= form_for(:user, :url => session_path(:user)) do |f| %>
-    <span id="upper-field"><%= f.text_field :email %></span>
-    <span id="middle-field"><%= f.password_field :password %></span>
-    <%= f.check_box :remember_me, :id => "lower-field1" %>
-    <%= f.label :remember_me, :id => "lower-field2"%>
-    <%= f.submit 'Sign in' , :id => "lower-field3"%>
-    <span id="bottom-field"><%= link_to "Forgot your password?", new_password_path(:user) %></span>
-  <% end %>
+<div class="book-container">
+  <%= image_tag("splash-book.png", :class => "whole-book")%>
+  <div class="right-page">
+    <%= form_for(:user, :url => session_path(:user)) do |f| %>
+      <%= f.text_field :email %>
+      <%= f.password_field :password %>
+      <%= f.check_box :remember_me, :id => "lower-field1" %>
+      <%= f.label :remember_me, :id => "lower-field2"%>
+      <%= f.submit 'Sign in' , :id => "lower-field3"%>
+      <%= link_to "Forgot your password?", new_password_path(:user) %>
+    <% end %>
+  </div>
 </div>

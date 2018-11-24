@@ -61,13 +61,15 @@ body.users.show {
 }
 
 body.teachers.show {
-  background: url(/assets/music-slate-bg.jpg) no-repeat center center fixed;
+  background: url(/assets/music-slate-bg.jpg) no-repeat center center fixed, rgba(251,233,223,0.3);
   background-size: cover;
+  background-blend-mode: lighten;
 }
 
 body.students.show {
-  background: url(/assets/music-slate-bg.jpg) no-repeat center center fixed;
+  background: url(/assets/music-slate-bg.jpg) no-repeat center center fixed, rgba(251,233,223,0.3);
   background-size: cover;
+  background-blend-mode: lighten;
 }
 
 #book-container {
@@ -81,19 +83,31 @@ body.students.show {
     color: white;
 }
 
-#upper-field {
+.right-page {
+  position: absolute;
+  align: right;
+  /* border: 9em 9em 1em 1em; */
+}
+
+/* #right-page.input#user_email {
   position: absolute;
   top: 9em;
   right: 12em;
-}
+} */
 
-#middle-field {
+/* #upper-field {
+  position: absolute;
+  top: 9em;
+  right: 12em;
+} */
+
+/* #middle-field {
   position: absolute;
   top: 13em;
   right: 12em;
-}
+} */
 
-.lower-field1 {
+/* .lower-field1 {
   top: 17em;
   right: 12em;
 }
@@ -111,9 +125,17 @@ body.students.show {
 #bottom-field {
   top: 29em;
   right: 12em;
-}
+} */
 
-.top-left {
+/* .home-sign-ins.click-ons {
+  padding: 3em, 2em, 3em;
+  border-style: hidden;
+  border-style: dotted;
+  border-radius: 10px;
+  margin: 3em, 6em, 1em, 2em;
+} */
+
+/* .top-left {
     position: absolute;
     top: 1em;
     left: 3.5em;
@@ -123,7 +145,7 @@ body.students.show {
     position: absolute;
     bottom: 1em;
     left: 0.85em;
-}
+} */
 
 
 /* #book-pages {
@@ -154,7 +176,7 @@ body.students.show {
 }
 
 .teacher-name {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Chelsea Market', cursive;
   color: #F3F2F2
 }
 

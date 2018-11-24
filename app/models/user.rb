@@ -23,6 +23,7 @@ class User < ApplicationRecord
 
   has_many :user_instrument_sections
   has_many :instrument_sections, through: :user_instrument_sections
+  has_many :assignments, through: :instrument_sections
 
   def full_name_last
     "#{last_name}, #{first_name}"
