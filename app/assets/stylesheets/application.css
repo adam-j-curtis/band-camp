@@ -72,6 +72,10 @@ body.students.show {
   background-blend-mode: lighten;
 }
 
+ul {
+  list-style-type: none;
+}
+
 #book-container {
     /* display: block;
     margin-left: auto;
