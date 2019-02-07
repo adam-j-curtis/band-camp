@@ -38,6 +38,28 @@ TeacherStudent.create(student: s7, teacher: t4)
 TeacherStudent.create(student: s8, teacher: t4)
 TeacherStudent.create(student: s9, teacher: t4)
 
+# bands
+
+ayn_classical = Band.create(name: "Ayn's Orchestra", teacher_id: 1)
+loic_marching = Band.create(name: "Loic's Junior Marching Band", teacher_id: 2)
+paco_jazz = Band.create(name: "Paco's Jazz Band", teacher_id: 3)
+mai_marching = Band.create(name: "Mai's Marching Band", teacher_id: 4)
+
+# band memberships
+
+BandMembership.create(user: s1, band: mai_marching)
+BandMembership.create(user: s1, band: ayn_classical)
+BandMembership.create(user: s2, band: loic_marching)
+BandMembership.create(user: s2, band: mai_marching)
+BandMembership.create(user: s3, band: loic_marching)
+BandMembership.create(user: s3, band: mai_marching)
+BandMembership.create(user: s4, band: paco_jazz)
+BandMembership.create(user: s5, band: paco_jazz)
+BandMembership.create(user: s6, band: paco_jazz)
+BandMembership.create(user: s7, band: mai_marching)
+BandMembership.create(user: s8, band: mai_marching)
+BandMembership.create(user: s9, band: mai_marching)
+
 # instruments
 flute = InstrumentSection.create(instrument: "Flute")
 snare = InstrumentSection.create(instrument: "Snare")

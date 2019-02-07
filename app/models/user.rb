@@ -25,6 +25,10 @@ class User < ApplicationRecord
   has_many :instrument_sections, through: :user_instrument_sections
   has_many :assignments, through: :instrument_sections
 
+  has_many :bands_as_teacher, class_name: "Band", foreign_key: "Teacher_id"
+  has_many :band_memberships
+  has_many :bands, through: :band_memberships
+
   def full_name_last
     "#{last_name}, #{first_name}"
   end
