@@ -9,5 +9,6 @@ class TeachersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @students = @user.students
+    @bands = @user.bands_as_teacher
   end
 end
