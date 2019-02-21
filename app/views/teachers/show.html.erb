@@ -4,7 +4,7 @@
   <h3 class="category">Your bands:</h3>
     <% ordered_bands = @bands.sort_by { |band| band.name} %>
     <% ordered_bands.each do |band| %>
-      <h5 class="band-name"><%= "#{band.name}" %></h5>
+      <h5 class="band-name"><%= link_to band.name, band_path(band) %></h5>
     <% end %>
   <h3 class="category">Your students:</h3>
     <% ordered_students = @students.sort_by { |student| student.last_name} %>

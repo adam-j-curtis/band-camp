@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   resources :teachers, only: [ :index, :show ]
 
+  resources :bands, only: [:index, :show]
+
 
     namespace :api do
       namespace :v1 do

@@ -72,6 +72,12 @@ body.students.show {
   background-blend-mode: lighten;
 }
 
+body.bands.show {
+  background: url(/assets/music-slate-bg.jpg) no-repeat center center fixed, rgba(251,233,223,0.3);
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
 ul {
   list-style-type: none;
 }
