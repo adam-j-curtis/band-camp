@@ -1,0 +1,14 @@
+<!-- Update database to access instruments with thru-thru relation : user >> bands >> instrumentalSections  -->
+<!-- Will loop in "members by section/seat".
+  1. section
+    2. seat(s)
+      a. ordinal number seat
+      b. student -->
+
+<h2 class="heading"><%="#{@band.name}'s Home Page"%></h2>
+
+  <h3 class="category">Instructor:</h3>
+    <h2 class="teacher-name"><%= link_to @teacher, teacher_path %></h2>
+  <h3 class="category">Members by Section and Seat:</h3>
+    <h4 class="instrument-section"></h4>
+      <h5 class="student-name"></h5>
