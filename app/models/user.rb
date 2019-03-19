@@ -10,6 +10,11 @@ class User < ApplicationRecord
   validates :city, presence: true
   validates :position, presence: true
 
+  POSITIONS = [
+    ["student", "Student"],
+    ["teacher", "Teacher"]
+  ]
+
   # student side of the relationship -> teacher.
   has_many :teacher_students_as_student, class_name: "TeacherStudent", foreign_key: "student_id"
   has_many :teachers, through: :teacher_students_as_student, source: :teacher
