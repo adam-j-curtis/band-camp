@@ -17,7 +17,8 @@ feature 'user registers', %Q{
 
     fill_in 'First Name', with: 'June'
     fill_in 'Last Name', with: 'Vega'
-    fill_in 'Position', with: 'Teacher'
+    choose 'Teacher'
+    # fill_in 'Position', with: 'Teacher'
     fill_in 'School Name', with: 'Eldrige Academy'
     fill_in 'City', with: 'Buenos Aires'
     fill_in 'Email', with: 'vegas.rosadas@example.com'
