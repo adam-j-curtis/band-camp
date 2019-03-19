@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @students = User.where(position: "student")
+    @teachers = User.where(position: "teacher")
   end
 
   def show
