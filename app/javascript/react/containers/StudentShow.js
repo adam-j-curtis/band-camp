@@ -38,15 +38,24 @@ class StudentShow extends Component {
       // for(let i = 0; i < body.user.instrument_sections.length; i++){
       //   sections.push(body.user.instrument_sections[i].instrument);
       // };
-      const assignmentsArray = body.user.assignments.map(assignment =>
-        assignment.name);
+
+      // const assignmentsArray = body.user.assignments.map(assignment =>
+      //   assignment.name);
+
+      const assigns = body.user.assignments.map(({ name, description }) =>
+        `${name}: ${description}`);
+
+        //Object destructuring in the argument of .map callback, makes name and description
+        //from assignments available as arguments in the fx body.  Equivalent to:
+        //const assigns = body.user.assignments.map(assignment => `${assignment.name}: ${assignment.description}`)
+
       // const pairs = [];
       // const assigns = [];
       // for(let i = 0; i < body.user.assignments.length; i++){
       //   pairs[i] = `${body.user.assignments[i].name} : ${body.user.assignments[i].description}`;
       //   assigns.push(pairs[i]);
       // };
-      this.setState({ student: body.user, instrumentSections: instrumentsArray, assignments: assignmentsArray })
+      this.setState({ student: body.user, instrumentSections: instrumentsArray, assignments: assigns })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
